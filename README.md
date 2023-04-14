@@ -3,7 +3,7 @@ Lab notebook for GEN711
 
 Ava Rose 
 Project: FMT 
-Group Members: Alex Trott, Molly N
+
 4/14 Class Notes
 
 git clone (link)
