@@ -15,3 +15,6 @@ fork
 
 add a copy of a repo to your account
 
+git version
+
+tells you what version of git is installed
