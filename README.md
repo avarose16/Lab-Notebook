@@ -18,4 +18,14 @@ git version
 
 4/21 CLASS NOTES
 
+cut adapt
+# removes primer sequences 
 
+conda activate genomics 
+# gives access to the fastq program
+
+touch testfile.txt
+# makes an empty text file
+
+git add (filename)
+# adds a file to git from ron
