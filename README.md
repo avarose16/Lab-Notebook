@@ -10,22 +10,22 @@ github.com/jthmiller/gen711-811-example
 
 fork example repository 
 
-fork
+fork:
 add a copy of a repo to your account
 
-git version
+git version:
 tells you what version of git is installed
 
 4/21 CLASS NOTES
 
-cut adapt
+cut adapt:
 removes primer sequences 
 
-conda activate genomics 
+conda activate genomics: 
 gives access to the fastq program
 
-touch testfile.txt
+touch testfile.txt:
 makes an empty text file
 
-git add (filename)
+git add (filename):
 adds a file to git from ron
