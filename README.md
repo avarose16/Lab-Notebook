@@ -30,8 +30,8 @@ makes an empty text file
 git add (filename):
 adds a file to git from ron
 
-git commit -m '(random)'
 
+COMMANDS
 cp /tmp/gen711_project_data/fastp-single.sh ~/fastp-single.sh
 
 chmod +x ~/fastp-single.sh
