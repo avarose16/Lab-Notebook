@@ -29,3 +29,5 @@ makes an empty text file
 
 git add (filename):
 adds a file to git from ron
+
+git commit -m '(random)'
