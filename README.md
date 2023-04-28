@@ -83,15 +83,27 @@ qiime feature-table tabulate-seqs \
 
 
 4/28 COMMANDS
+
 conda activate genomics
+
 cp /tmp/gen711_project_data/fastp-single.sh .
+
 chmod +x fastp-single.sh
+
 ./fastp-single.sh 120 /tmp/gen711_project_data/FMT_3/fmt-tutorial-demux-2 trimmed_fastqs1
+
 ./fastp-single.sh 120 /tmp/gen711_project_data/FMT_3/fmt-tutorial-demux-1 trimmed_fastqs2
+
 ls -shS trimmed_fastqs1
+
 ls -shS trimmed_fastqs2
+
 conda activate qiime2-2022.8
+
 qiime tools import --type "SampleData[SequencesWithQuality]" --input-format CasavaOneEightSingleLanePerSampleDirFmt --input-path trimmed_fastqs1 --output-path qiimefile1
+
 qiime tools import --type "SampleData[SequencesWithQuality]" --input-format CasavaOneEightSingleLanePerSampleDirFmt --input-path trimmed_fastqs2 --output-path qiimefile2
+
 qiime cutadapt trim-single --i-demultiplexed-sequences qiimefile1.qza --p-front TACGTATGGTGCA --p-discard-untrimmed --p-match-adapter-wildcards --verbose --o-trimmed-sequences cutadapt1
+
 qiime cutadapt trim-single --i-demultiplexed-sequences qiimefile2.qza --p-front TACGTATGGTGCA --p-discard-untrimmed --p-match-adapter-wildcards --verbose --o-trimmed-sequences cutadapt2
