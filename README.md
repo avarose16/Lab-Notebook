@@ -111,3 +111,15 @@ qiime cutadapt trim-single --i-demultiplexed-sequences qiimefile2.qza --p-front 
 qiime demux summarize --i-data cutadapt1.qza --o-visualization qiimesummary1
 
 qiime demux summarize --i-data cutadapt2.qza --o-visualization qiimesummary2
+
+qiime dada2 denoise-single --i-demultiplexed-seqs cutadapt1.qza --p-trunc-len 50 --p-trim-left 13 --p-n-threads 4 --o-denoising-stats denoising-stats.qza --o-table feature_table.qza --o-representative-sequences rep-seqs.qza
+
+qiime dada2 denoise-single --i-demultiplexed-seqs cutadapt2.qza --p-trunc-len 50 --p-trim-left 13 --p-n-threads 4 --o-denoising-stats denoising-stats2.qza --o-table feature_table2.qza --o-representative-sequences rep-seqs2.qza
+
+qiime metadata tabulate --m-input-file denoising-stats.qza --o-visualization denoising-stats1.qzv
+
+qiime metadata tabulate --m-input-file denoising-stats2.qza --o-visualization denoising-stats2.qzv
+
+qiime feature-table tabulate-seqs --i-data rep-seqs.qza --o-visualization rep-seqs1.qzv
+
+qiime feature-table tabulate-seqs --i-data rep-seqs2.qza --o-visualization rep-seqs2.qzv
