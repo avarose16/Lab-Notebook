@@ -107,3 +107,7 @@ qiime tools import --type "SampleData[SequencesWithQuality]" --input-format Casa
 qiime cutadapt trim-single --i-demultiplexed-sequences qiimefile1.qza --p-front TACGTATGGTGCA --p-discard-untrimmed --p-match-adapter-wildcards --verbose --o-trimmed-sequences cutadapt1
 
 qiime cutadapt trim-single --i-demultiplexed-sequences qiimefile2.qza --p-front TACGTATGGTGCA --p-discard-untrimmed --p-match-adapter-wildcards --verbose --o-trimmed-sequences cutadapt2
+
+qiime demux summarize --i-data cutadapt1.qza --o-visualization qiimesummary1
+
+qiime demux summarize --i-data cutadapt2.qza --o-visualization qiimesummary2
