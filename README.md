@@ -135,3 +135,14 @@ qiime feature-classifier classify-sklearn --i-classifier /tmp/gen711_project_dat
 qiime taxa barplot --i-table /home/users/amr1175/FT/feature_table.qza --i-taxonomy /home/users/amr1175/FT/FMT-taxonomy.qza --o-visualization /home/users/amr1175/FT/barplot-1.qzv
 
 qiime taxa barplot --i-table /home/users/amr1175/FT/feature_table2.qza --i-taxonomy /home/users/amr1175/FT/FMT-taxonomy.qza --o-visualization /home/users/amr1175/FT/barplot-2.qzv
+
+cp /tmp/gen711_project_data/FMT_3/sample-metadata.tsv /home/users/amr1175/FT
+
+qiime taxa barplot --i-table feature_table.qza --m-metadata-file sample-metadata.tsv --i-taxonomy FMT-taxonomy.qza --o-visualization my-barplot.qzv
+
+qiime taxa barplot --i-table feature_table2.qza --m-metadata-file sample-metadata.tsv --i-taxonomy FMT-taxonomy.qza --o-visualization my-barplot2.qzv
+
+qiime feature-table filter-samples --i-table feature_table.qza --m-metadata-file sample-metadata.tsv --o-filtered-table new_samples_table.qza
+
+qiime feature-table filter-samples --i-table feature_table2.qza --m-metadata-file sample-metadata.tsv --o-filtered-table new_samples_table2.qza
+
