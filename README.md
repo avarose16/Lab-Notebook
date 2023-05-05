@@ -123,3 +123,15 @@ qiime metadata tabulate --m-input-file denoising-stats2.qza --o-visualization de
 qiime feature-table tabulate-seqs --i-data rep-seqs.qza --o-visualization rep-seqs1.qzv
 
 qiime feature-table tabulate-seqs --i-data rep-seqs2.qza --o-visualization rep-seqs2.qzv
+
+5/5 CLASS NOTES
+
+conda activate qiime2-2022.8
+
+qiime feature-table merge-seqs --i-data /home/users/amr1175/FT/rep-seqs.qza --i-data /home/users/amr1175/FT/rep-seqs2.qza --o-merged-data /home/users/amr1175/FT/merged.rep-seqs.qza
+
+qiime feature-classifier classify-sklearn --i-classifier /tmp/gen711_project_data/reference_databases/classifier.qza --i-reads /home/users/amr1175/FT/merged.rep-seqs.qza --o-classification /home/users/amr1175/FT/FMT-taxonomy.qza
+
+qiime taxa barplot --i-table /home/users/amr1175/FT/feature_table.qza --i-taxonomy /home/users/amr1175/FT/FMT-taxonomy.qza --o-visualization /home/users/amr1175/FT/barplot-1.qzv
+
+qiime taxa barplot --i-table /home/users/amr1175/FT/feature_table2.qza --i-taxonomy /home/users/amr1175/FT/FMT-taxonomy.qza --o-visualization /home/users/amr1175/FT/barplot-2.qzv
